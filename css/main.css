@@ -41,16 +41,16 @@
     font-family: helveticaneuecyr-roman;
     src: url(../fonts/helveticaneuecyr-roman.woff);
 }
-
 /* --------------- /fonts --------------- */
 
 /* --------------- site --------------- */
 .site {
+    overflow: hidden;
+    position: relative;
     min-height: 100%;
     width: 1173px;
     margin: 0 auto;
-    overflow: hidden;
-    position: relative;
+    font-family: "helveticaneuecyr-light", sans-serif;
     z-index: 1;
 }
 .site:after {
@@ -64,8 +64,8 @@
     display: inline-block;
     vertical-align: top;
     position: relative;
-    z-index: 2;
     width: 863px;
+    z-index: 2;
 }
 .site__aside{
     display: inline-block;
@@ -79,26 +79,6 @@
     width: 175px;
     margin: 0 auto;
     background: #0b83bd;
-}
-.games{
-    display: block;
-    padding: 10px 7px 0 7px;
-    background: #0380be;
-    text-align: justify;
-}
-.games__item{
-    display: inline-block;
-    vertical-align: top;
-    width: 75px;
-    height: 75px;
-    margin-bottom: 7px;
-    border-radius: 5px;
-    border: 5px solid #fff;
-    transition: opacity .3s ease;
-    -webkit-transition: opacity .3s ease;
-}
-.games .games__item:last-child{
-    margin-left: 6px;
 }
 .site__aside-wrap a:hover{
     opacity: 0.7;
@@ -139,8 +119,10 @@
     bottom: 0;
     height: 36px;
 }
-.site__footer-layout {
+.site__footer_index {
     width: 863px;
+}
+.site__footer-layout {
     height: 36px;
     padding: 10px;
     background: #000;
@@ -159,31 +141,49 @@
 }
 /* --------------- /site --------------- */
 
-/* --------------- /site --------------- */
-.header__menu{
+/* --------------- logo --------------- */
+.logo {
+    position: absolute;
+    top: 7px;
+    left: 38px;
+}
+/* --------------- /logo --------------- */
+
+/* --------------- header-menu --------------- */
+.header-menu{
     width: 100%;
     height: 50px;
     padding: 20px 0 0 210px;
     border-top:2px solid #3b6b99;
     border-bottom:2px solid #3b6b99;
     background: #fff;
-
 }
-.header__menu a{
+.header-menu__item{
     display: inline-block;
     vertical-align: top;
     position: relative;
     margin-right: 7px;
     font: 14px "helveticaneuecyr-light", sans-serif;
     font-weight: 600;
-    color:#051f5b;
     text-transform: uppercase;
+}
+.header-menu__item:before{
+    content: '| ';
+    margin-right: 5px;
+}
+.header-menu__item:first-child:before{
+    display: none;
+}
+.header-menu__item a{
+    color:#051f5b;
     transition: opacity .3s ease;
     -webkit-transition: opacity .3s ease;
 }
-.header__menu a:hover{
-    opacity: .7;
+.header-menu__item a:hover{
+    opacity: .8;
 }
+/* --------------- /header-menu --------------- */
+
 /* --------------- social --------------- */
 .social{
     position: absolute;
@@ -198,28 +198,82 @@
     margin-right: 1px;
     transition: background .3s ease;
 }
-.social-g,
-.social-p,
-.social-f{
+.social__g,
+.social__p,
+.social__f{
     background: url("../img/social-splite.png") no-repeat center;
     background-position: 0 0;
 }
-.social-p{
+.social__p{
     background-position: -40px 0;
 }
-.social-f{
+.social__f{
     background-position: -80px 0;
 }
-.social-g:hover{
+.social__g:hover{
     background-position: 0 -45px;
 }
-.social-p:hover{
+.social__p:hover{
     background-position: -40px -45px;
 }
-.social-f:hover{
+.social__f:hover{
     background-position: -80px -45px;
 }
 /* --------------- /social --------------- */
+
+/* --------------- btn --------------- */
+.btn{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    position: relative;
+    border: 1px solid #1d518c;
+    border-radius: 4px;
+    color: #000;
+    font-size: 16px;
+    background-color: #276ebe;
+    transition: background .3s ease;
+    -webkit-transition: background .3s ease;
+}
+.btn_1{
+    width: 240px;
+    height: 52px;
+    border: 2px solid #101010;
+    font: 20px "Hand_Of_Sean_Demo", sans-serif;
+    background-color: #38da13;
+}
+.btn_1:after{
+    width: 29px;
+    height: 29px;
+    margin-left: 11px;
+    background: url("../img/play.png")no-repeat center;
+    content: '';
+}
+.btn_1:hover{
+    background: #3FF513;
+}
+.btn_2{
+    width: 200px;
+    height: 36px;
+    border-color: #1d518c;
+    border-radius: 10px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.btn_2:after{
+    width: 25px;
+    height: 25px;
+    margin-left: 11px;
+    background: url("../img/chrome-icon.png") no-repeat center;
+    content: '';
+}
+.btn_2:hover{
+    background-color: #155296;
+}
+/* --------------- /btn --------------- */
 
 /* --------------- video --------------- */
 .video{
@@ -308,6 +362,29 @@
 }
 /* --------------- /add-chrome --------------- */
 
+/* --------------- games --------------- */
+.games{
+    display: block;
+    padding: 10px 7px 0 7px;
+    background: #0380be;
+    text-align: justify;
+}
+.games__item{
+    display: inline-block;
+    vertical-align: top;
+    width: 75px;
+    height: 75px;
+    margin-bottom: 7px;
+    border-radius: 5px;
+    border: 5px solid #fff;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+.games .games__item:last-child{
+    margin-left: 6px;
+}
+/* --------------- /games --------------- */
+
 /* --------------- get-games --------------- */
 .get-games{
     padding: 44px 12px 0 37px;
@@ -323,14 +400,83 @@
 }
 .get-games__title{
     display: block;
-
 }
 /* --------------- /get-games --------------- */
 
-/* --------------- logo --------------- */
-.logo {
-    position: absolute;
-    top: 7px;
-    left: 38px;
+/* --------------- promo --------------- */
+.promo{
+    height: 451px;
+    margin: 42px auto 30px;
+    padding: 27px 89px;
+    border-top: 1px solid #051f5b;
+    border-bottom: 1px solid #051f5b;
+    background-color: #e1e1e1;
+    background-image: url("../img/bg-promo.jpg");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    color: #010101;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -.4px;
 }
-/* --------------- /logo --------------- */
+.promo__title{
+    margin-bottom: 5px;
+}
+.promo__content{
+    margin-bottom: 23px;
+}
+.promo__advice{
+    font-size: 23px;
+    line-height: 32px;
+}
+.promo__wrap{
+    padding: 0 10px;
+}
+/* --------------- /promo --------------- */
+
+/* --------------- offer --------------- */
+.offer{
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: wrap row;
+    -webkit-flex-flow: wrap row;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    margin-bottom: 50px;
+    padding: 40px 87px 0;
+}
+.offer__content{
+    font: 20px/26px "Hand_Of_Sean_Demo", sans-serif;
+    color: #051f5b;
+}
+.offer__deco{
+    width: 100%;
+}
+/* --------------- /offer --------------- */
+
+/* --------------- order --------------- */
+.order{
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-items: center;
+    -webkit-align-items: center;
+    width: 340px;
+    color: #051f5b;
+    font-size: 10px;
+    line-height: 11px;
+}
+.order__note{
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+}
+.order_promo{
+    width: 375px;
+}
+.order_promo .order__note{
+    width: 240px;
+}
+/* --------------- /order --------------- */
