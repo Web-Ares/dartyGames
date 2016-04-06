@@ -1,0 +1,336 @@
+@charset "utf-8";
+/* --------------- Style to null --------------- */
+*{-moz-box-sizing:border-box;box-sizing:border-box;}html,body,div,span,h1,h2,h3,h4,h5,h6,p,em,img,strong,sub,sup,b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,table,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,a,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{border:0;outline:0;vertical-align:baseline;background:transparent;font-size:100%;margin:0;padding:0;}a{background:transparent;}table{border-collapse:collapse;border-spacing:0;}td,td img{vertical-align:top;}input,select,button,textarea{font-size:12px;font-family:Arial, Helvetica, sans-serif;margin:0;}input[type="text"],input[type="password"],textarea,input[type="email"],input[type="phone"],input[type="number"]{font:12px Arial, Helvetica, sans-serif;padding:0;}input[type="checkbox"]{vertical-align:bottom;}input[type="radio"]{vertical-align:text-bottom;}sub{vertical-align:sub;font-size:smaller;}sup{vertical-align:super;font-size:smaller;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}ul,ol{list-style:none;}html{overflow-y:scroll;overflow-x:auto;}html,body{height:100%;}body{line-height:1;color:#000;text-align:left;z-index:1;position:relative;}input [type='text']{padding:0;}textarea{resize:none;overflow:auto;}label,input[type="button"],input[type="submit"],button{cursor:pointer;}input[type="button"],input[type="reset"],input[type="submit"],button,input[type="text"],input[type="password"],textarea,input[type="email"],input[type="tel"],input[type="phone"],input[type="number"]{-webkit-appearance:none;}a,a:visited,a:hover,a:focus,a:active{text-decoration:none;}input[type="submit"]::-moz-focus-inner,button::-moz-focus-inner{border:0;padding:0;}input:invalid{outline:none;-moz-box-shadow:none;border:none;}::-ms-clear{display:none;}input,textarea,input[type="search"]:focus,:focus{outline:none;}
+/* --------------- Style to null --------------- */
+
+/*
+    main styles
+    version: 15.01.2013
+
+    placeholder
+
+    fonts
+
+    site
+
+    logo
+*/
+
+/* --------------- placeholder --------------- */
+::-webkit-input-placeholder {
+    color: #000;
+}
+:-moz-placeholder {
+    color: #000;
+}
+.placeholder {
+    color: #000;
+}
+/* --------------- /placeholder --------------- */
+
+/* --------------- fonts --------------- */
+@font-face {
+    font-family: Hand_Of_Sean_Demo;
+    src: url(../fonts/Hand_Of_Sean_Demo.ttf);
+}
+@font-face {
+    font-family: helveticaneuecyr-light;
+    src: url(../fonts/helveticaneuecyr-light.woff);
+}
+@font-face {
+    font-family: helveticaneuecyr-roman;
+    src: url(../fonts/helveticaneuecyr-roman.woff);
+}
+
+/* --------------- /fonts --------------- */
+
+/* --------------- site --------------- */
+.site {
+    min-height: 100%;
+    width: 1173px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.site:after {
+    content: '';
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 36px;
+}
+.site__content {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    z-index: 2;
+    width: 863px;
+}
+.site__aside{
+    display: inline-block;
+    vertical-align: top;
+    width: 237px;
+    margin-left: 25px;
+    border: 2px solid #3b6b99;
+    background: #8cddf7;
+}
+.site__aside-wrap{
+    width: 175px;
+    margin: 0 auto;
+    background: #0b83bd;
+}
+.games{
+    display: block;
+    padding: 10px 7px 0 7px;
+    background: #0380be;
+    text-align: justify;
+}
+.games__item{
+    display: inline-block;
+    vertical-align: top;
+    width: 75px;
+    height: 75px;
+    margin-bottom: 7px;
+    border-radius: 5px;
+    border: 5px solid #fff;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+.games .games__item:last-child{
+    margin-left: 6px;
+}
+.site__aside-wrap a:hover{
+    opacity: 0.7;
+}
+.site__aside-title{
+    position: relative;
+    padding-bottom: 8px;
+    margin: 14px 0 6px;
+    font: 20px "Hand_Of_Sean_Demo", sans-serif;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    line-height: 25px;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+.site__aside-title:before{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 144px;
+    height: 2px;
+    margin-left: -72px;
+    background: #3b6b99;
+    content: "";
+}
+.site__header {
+    position: relative;
+    height: 132px;
+    padding-top: 82px;
+    background: #8cddf7;
+    z-index: 3;
+}
+.site__footer {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 36px;
+}
+.site__footer-layout {
+    width: 863px;
+    height: 36px;
+    padding: 10px;
+    background: #000;
+    text-align: center;
+    font: 13px "helveticaneuecyr-light", sans-serif;
+}
+.site__footer-links{
+    margin-right: 3px;
+    font: 13px "helveticaneuecyr-light", sans-serif;
+    color: #b1afaf;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+.site__footer-links:hover{
+    opacity: .7;;
+}
+/* --------------- /site --------------- */
+
+/* --------------- /site --------------- */
+.header__menu{
+    width: 100%;
+    height: 50px;
+    padding: 20px 0 0 210px;
+    border-top:2px solid #3b6b99;
+    border-bottom:2px solid #3b6b99;
+    background: #fff;
+
+}
+.header__menu a{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin-right: 7px;
+    font: 14px "helveticaneuecyr-light", sans-serif;
+    font-weight: 600;
+    color:#051f5b;
+    text-transform: uppercase;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+.header__menu a:hover{
+    opacity: .7;
+}
+/* --------------- social --------------- */
+.social{
+    position: absolute;
+    top: 33px;
+    right: 22px;
+}
+.social a {
+    display: inline-block;
+    vertical-align: middle;
+    width: 37px;
+    height: 37px;
+    margin-right: 1px;
+    transition: background .3s ease;
+}
+.social-g,
+.social-p,
+.social-f{
+    background: url("../img/social-splite.png") no-repeat center;
+    background-position: 0 0;
+}
+.social-p{
+    background-position: -40px 0;
+}
+.social-f{
+    background-position: -80px 0;
+}
+.social-g:hover{
+    background-position: 0 -45px;
+}
+.social-p:hover{
+    background-position: -40px -45px;
+}
+.social-f:hover{
+    background-position: -80px -45px;
+}
+/* --------------- /social --------------- */
+
+/* --------------- video --------------- */
+.video{
+    width: 100%;
+    padding: 22px 0 30px;
+    background: #ebebeb;
+    border-bottom:2px solid #3b6b99;
+}
+.video__play{
+    position: relative;
+    width: 593px;
+    height: 339px;
+    margin: 0 auto;
+    background: #000;
+}
+.video__play-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 161px;
+    height: 45px;
+    padding-right: 23px;
+    font: 20px "Hand_Of_Sean_Demo", sans-serif;
+    border-radius: 4px;
+    border: 2px solid #fff;
+    background: #38da13;
+    text-align: center;
+    line-height: 38px;
+    font-weight: 600;
+    color: #000;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transition: background .3s ease;
+    -webkit-transition: background .3s ease;
+}
+.video__play-btn:before{
+    position: absolute;
+    top: 50%;
+    right: 35px;
+    width: 29px;
+    height: 29px;
+    background: url("../img/play.png")no-repeat center;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    content: '';
+}
+.video__play-btn:hover{
+    background: #3FF513;
+}
+/* --------------- /video --------------- */
+
+/* --------------- add-chrome --------------- */
+.add-chrome{
+    padding: 14px 6px 10px 10px;
+    text-align: center;
+    color: #051f5b;
+    font: 20px "helveticaneuecyr-roman", sans-serif;
+    letter-spacing: -0.2px;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+.add-chrome__btn{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 197px;
+    height: 36px;
+    margin: -4px 0 0 6px;
+    padding: 7px 0 0 10px;
+    border-radius: 1px;
+    background: #276ebe;
+    text-align: left;
+    color: #fff;
+    font: 16px "helveticaneuecyr-light", sans-serif;
+    text-transform: uppercase;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+.add-chrome__btn:hover{
+    opacity: .7;
+}
+.add-chrome__btn img{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+/* --------------- /add-chrome --------------- */
+
+/* --------------- get-games --------------- */
+.get-games{
+    padding: 44px 12px 0 37px;
+    min-height: 244px;
+    border-top: 2px solid #3b6b99;
+    background: #ebebeb url("../img/get-games-bg.png") no-repeat 38px 29px;
+    font: 20px "Hand_Of_Sean_Demo", sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    color: #051f5b;
+    text-align: center;
+    line-height: 25px;
+}
+.get-games__title{
+    display: block;
+
+}
+/* --------------- /get-games --------------- */
+
+/* --------------- logo --------------- */
+.logo {
+    position: absolute;
+    top: 7px;
+    left: 38px;
+}
+/* --------------- /logo --------------- */
