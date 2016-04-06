@@ -465,13 +465,17 @@
     -webkit-align-items: center;
     width: 340px;
     color: #051f5b;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 11px;
 }
 .order__note{
     display: block;
     width: 100%;
     padding-top: 10px;
+}
+.order__note_bigger{
+    font-size: 12px;
+    line-height: 12px;
 }
 .order_promo{
     width: 375px;
